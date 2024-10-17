@@ -25,9 +25,8 @@ fn get_user_input(prompt: &str) -> f32 {
         if let Ok(value) = buffer.trim().parse::<f32>() {
             if value > 0.0 {
                 return value;
-            } else {
-                println!("Value must be positive, please try again.");
             }
+            println!("Value must be positive, please try again.");
         } else {
             println!("Failed to convert input to a number, please try again.");
         }
